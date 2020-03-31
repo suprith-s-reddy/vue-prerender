@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      imagePullSecrets:
+        - name: srregcred
+      containers:
+        - name: web
+          image: vue-prerender/web
+          ports:
+            - containerPort: 3000
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"

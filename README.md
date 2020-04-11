@@ -9,12 +9,17 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for staging
 ```
-npm run build
+npm run build-staging
+```
+
+### Compiles and minifies for production and generate a sitemap dynamically
+```
+npm run build-prod
 ```
 
 ### Run your unit tests
@@ -31,6 +36,3 @@ npm run test:e2e
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

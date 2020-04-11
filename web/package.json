@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 3000 ",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve --port 3000",
+    "build-prod": "NODE_ENV=production node src/sitemap/sitemap.js & vue-cli-service build",
+    "build-staging": "NODE_ENV=staging vue-cli-service build --mode staging",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
@@ -12,6 +13,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "register-service-worker": "^1.6.2",
+    "sitemap-webpack-plugin": "^0.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
